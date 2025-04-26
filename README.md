@@ -4,6 +4,21 @@
 
 # FramePack
 
+A fork of lllyasviel's FramePack Gradio interface.
+
+Added features:
+
+- multiple LoRA loading with autoadaptation and fusing, supports all HunyuanVideo LoRAs, weights are manageable as well;
+- (WIP) loading LoRA from GUI, requires model reloading but seems possible;
+- T2V mode;
+- more resolutions available - 1x (640), 0.5x (320), 0.75x (480), 1.2x (768), 1.3x (832);
+- optimizations for the model, replacing torch.compile from another fork;
+- random seed generator;
+- manageable latent window size (amount of frames to process at the same time);
+- fixed previews, now correctly coloured;
+- loading custom LLaMA (text encoder) model, currently adapted strictly to Uncensored LLaMA fp8 but seems like other model can be loaded too. WIP: adding a path to load custom LLaMA as a CLI startup flag;
+- CLIP model changed to zer0int's variant.
+
 Official implementation and desktop software for ["Packing Input Frame Context in Next-Frame Prediction Models for Video Generation"](https://lllyasviel.github.io/frame_pack_gitpage/).
 
 Links: [**Paper**](https://lllyasviel.github.io/frame_pack_gitpage/pack.pdf), [**Project Page**](https://lllyasviel.github.io/frame_pack_gitpage/)
